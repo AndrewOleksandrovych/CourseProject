@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Головна</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/index.css"> <!-- Підключення окремого CSS -->
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.html">Головна</a></li>
+                <li><a href="pages/list.html">Список техніки</a></li>
+                <li><a href="pages/add.html">Додати техніку</a></li>
+                <li><a href="pages/statistics.html">Статистика</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1 class="page-title">Інформаційна система обліку автомобільної техніки</h1>
+        <p class="intro-text">Ця система допомагає вести облік автомобільної техніки військової частини, відображати статистику стану техніки та керувати нею.</p>
+
+        <!-- Статистичний блок -->
+        <div class="stats-container">
+            <div class="stat-card">
+                <h2 id="totalVehicles">0</h2>
+                <p>Загальна кількість техніки</p>
+            </div>
+            <div class="stat-card">
+                <h2 id="operationalVehicles">0</h2>
+                <p>Справні</p>
+            </div>
+            <div class="stat-card">
+                <h2 id="underRepairVehicles">0</h2>
+                <p>В ремонті</p>
+            </div>
+        </div>
+
+        <!-- Кнопки швидкого доступу -->
+        <div class="quick-links">
+            <a href="pages/list.html" class="btn">Переглянути список</a>
+            <a href="pages/add.html" class="btn">Додати техніку</a>
+            <a href="pages/statistics.html" class="btn">Детальна статистика</a>
+        </div>
+    </main>
+    <footer>
+        <div class="footer-content">
+            <!-- Контактна інформація -->
+            <div class="footer-contact">
+                <h3>Контакти</h3>
+                <p>Телефон: <a href="tel:+380123456789">+380 12 345 6789</a></p>
+                <p>Email: <a href="mailto:info@autosystem.com">info@autosystem.com</a></p>
+                <p>Адреса: вул. Технічна, 10, Київ, Україна</p>
+            </div>
+    
+            <!-- Посилання -->
+            <div class="footer-links">
+                <h3>Швидкі посилання</h3>
+                <ul>
+                    <li><a href="index.html">Головна</a></li>
+                    <li><a href="pages/list.html">Список техніки</a></li>
+                    <li><a href="pages/add.html">Додати техніку</a></li>
+                    <li><a href="pages/statistics.html">Статистика</a></li>
+                </ul>
+            </div>
+    
+            <!-- Соціальні іконки -->
+            <div class="footer-social">
+                <h3>Слідкуйте за нами</h3>
+                <a href="#"><img src="icons/facebook.svg" alt="Facebook"></a>
+                <a href="#"><img src="icons/linkedin.svg" alt="LinkedIn"></a>
+                <a href="#"><img src="icons/twitter.svg" alt="Twitter"></a>
+            </div>
+        </div>
+    
+        <!-- Копірайт -->
+        <div class="footer-bottom">
+            <p>&copy; <span id="currentYear"></span> Інформаційна система обліку техніки. Всі права захищено.</p>
+        </div>
+    </footer>
+    
+    <script src="js/main.js"></script>
+    <script>
+        // Завантаження статистики на головну
+        document.addEventListener('DOMContentLoaded', () => {
+            const vehicles = JSON.parse(localStorage.getItem('vehicleData')) || [];
+
+            // Оновлення статистичних даних
+            document.getElementById('totalVehicles').textContent = vehicles.length;
+            document.getElementById('operationalVehicles').textContent = vehicles.filter(v => v.status === 'Справний').length;
+            document.getElementById('underRepairVehicles').textContent = vehicles.filter(v => v.status === 'В ремонті').length;
+        });
+    </script>
+    <script>
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+    </script>
+    
+</body>
+</html>

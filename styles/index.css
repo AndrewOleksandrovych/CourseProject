@@ -1,0 +1,143 @@
+/* Заголовок сторінки */
+.page-title {
+    font-size: 2.5rem;
+    color: #6a11cb;
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+/* Вступний текст */
+.intro-text {
+    text-align: center;
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    color: #333;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Контейнер статистики */
+.stats-container {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    margin-bottom: 2rem;
+}
+
+.stat-card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    flex: 1;
+    max-width: 300px;
+}
+
+.stat-card h2 {
+    font-size: 2rem;
+    color: #6a11cb;
+    margin: 0;
+}
+
+.stat-card p {
+    font-size: 1rem;
+    color: #666;
+}
+
+/* Кнопки швидкого доступу */
+.quick-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.quick-links .btn {
+    display: inline-block;
+    padding: 15px 30px;
+    background: linear-gradient(90deg, #6a11cb 0%, #2575fc 100%);
+    color: #fff;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 5px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease, transform 0.2s ease;
+}
+
+.quick-links .btn:hover {
+    box-shadow: 0 6px 15px rgba(106, 17, 203, 0.4);
+    transform: translateY(-2px);
+}
+/* Адаптація для мобільних пристроїв */
+@media (max-width: 768px) {
+    /* Заголовок сторінки */
+    .page-title {
+        font-size: 1.8rem;
+    }
+
+    /* Текст у вступі */
+    .intro-text {
+        font-size: 1rem;
+        padding: 0 10px;
+    }
+
+    /* Статистичний блок */
+    .stats-container {
+        flex-direction: column; /* Статистичні картки у стовпчик */
+        align-items: center;
+    }
+
+    .stat-card {
+        width: 90%; /* Зменшено ширину карток */
+        margin-bottom: 15px;
+    }
+
+    /* Кнопки швидкого доступу */
+    .quick-links {
+        flex-direction: column; /* Кнопки у стовпчик */
+        gap: 10px;
+    }
+
+    .quick-links .btn {
+        width: 90%; /* Зменшено ширину кнопок */
+        text-align: center;
+    }
+
+    /* Навігаційна панель */
+    .navbar ul {
+        flex-direction: column; /* Навігаційне меню у стовпчик */
+        gap: 10px;
+    }
+
+    .navbar a {
+        padding: 10px;
+        font-size: 0.9rem;
+    }
+
+    /* Таблиці */
+    table {
+        font-size: 0.8rem; /* Зменшення тексту в таблиці */
+    }
+
+    /* Графіки */
+    .chart-container {
+        width: 90%; /* Зменшено ширину графіків */
+        height: auto;
+    }
+
+    .chart-container canvas {
+        height: 200px; /* Зменшено висоту графіків */
+    }
+
+    /* Футер */
+    .footer-content {
+        flex-direction: column; /* Футер у стовпчик */
+        text-align: center;
+        gap: 20px;
+    }
+
+    .footer-contact, .footer-links, .footer-social {
+        max-width: 100%;
+    }
+}
