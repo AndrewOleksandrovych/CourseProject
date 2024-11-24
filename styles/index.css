@@ -141,3 +141,53 @@
         max-width: 100%;
     }
 }
+.slider {
+    width: 70%;
+    max-width: 700px;
+    margin: 20px auto;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.slides {
+    display: flex;
+    animation: slide 30s infinite; /* Змінюємо тривалість анімації (15 секунд) */
+}
+
+.slides img {
+    width: 100%;
+    object-fit: cover;
+}
+
+@keyframes slide {
+    0% { transform: translateX(0); }
+    33% { transform: translateX(-100%); }
+    66% { transform: translateX(-200%); }
+    100% { transform: translateX(0); }
+}
+.intro-text {
+    font-size: 1.5rem; /* Збільшимо розмір тексту */
+    font-weight: 400;
+    color: #444; /* Трохи темніший колір для читабельності */
+    text-align: center; /* Центрування тексту */
+    line-height: 1.8; /* Збільшення інтервалу між рядками */
+    max-width: 800px; /* Обмежимо ширину тексту */
+    margin: 0 auto 2rem auto; /* Центрування тексту і додавання відступу знизу */
+    background: linear-gradient(90deg, #6a11cb, #2575fc); /* Додаємо градієнт */
+    -webkit-background-clip: text; /* Застосування градієнта до тексту */
+    -webkit-text-fill-color: transparent; /* Робимо фон тексту прозорим */
+    animation: fadeIn 2s ease-out; /* Анімація появи */
+}
+
+/* Анімація для плавного з'явлення */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

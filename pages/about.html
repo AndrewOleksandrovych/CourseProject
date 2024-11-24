@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Про сайт</title>
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/about.css"> <!-- Окремий CSS для сторінки -->
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <ul>
+                <li><a href="../index.html">Головна</a></li>
+                <li><a href="list.html">Список техніки</a></li>
+                <li><a href="add.html">Додати техніку</a></li>
+                <li><a href="statistics.html">Статистика</a></li>
+                <li><a href="about.html">Про сайт</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1 class="page-title">Про сайт</h1>
+        <section class="about-section">
+            <h2>Мета створення</h2>
+            <p>
+                Цей сайт розроблений для автоматизації обліку автомобільної техніки військової частини. 
+                Його основна мета — забезпечити зручний доступ до інформації про техніку, її стан та розташування.
+            </p>
+            
+        </section>
+        <div class="slider">
+                <div class="slides">
+                    <img src="/images/01000000-0a00-0242-71b1-08dc5fc16966_w1080_r0_s.jpg" alt="Техніка 1">
+                    <img src="/images/1-1-1.jpg" alt="Техніка 2">
+                    <img src="/images/oplot.jpg" alt="Техніка 3">
+                </div>
+            </div>
+        <section class="about-section">
+            <h2>Чому це важливо?</h2>
+            <p>
+                Ефективний облік техніки є ключовим фактором у підтриманні боєздатності військової частини.
+                Завдяки системі можна швидко визначити технічний стан автомобілів, уникнути втрати інформації та оптимізувати використання ресурсів.
+            </p>
+        </section>
+        <section class="about-section">
+            <h2>Що дозволяє ця система?</h2>
+            <ul>
+                <li>Додавати, редагувати та видаляти дані про техніку.</li>
+                <li>Відстежувати технічний стан автомобілів.</li>
+                <li>Переглядати детальну статистику стану техніки.</li>
+                <li>Створювати списки автомобілів для аналізу та управління.</li>
+            </ul>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-content">
+            <!-- Контактна інформація -->
+            <div class="footer-contact">
+                <h3>Контакти</h3>
+                <p>Телефон: <a href="tel:+380123456789">+380 12 345 6789</a></p>
+                <p>Email: <a href="mailto:info@autosystem.com">info@autosystem.com</a></p>
+                <p>Адреса: вул. Технічна, 10, Київ, Україна</p>
+            </div>
+    
+            <!-- Посилання -->
+            <div class="footer-links">
+                <h3>Швидкі посилання</h3>
+                <ul>
+                    <li><a href="index.html">Головна</a></li>
+                    <li><a href="pages/list.html">Список техніки</a></li>
+                    <li><a href="pages/add.html">Додати техніку</a></li>
+                    <li><a href="pages/statistics.html">Статистика</a></li>
+                </ul>
+            </div>
+    
+            <!-- Соціальні іконки -->
+            <div class="footer-social">
+                <h3>Слідкуйте за нами</h3>
+                <a href="https://facebook.com" target="_blank">
+                    <img src="icons/facebook.svg" alt="Facebook">
+                </a>
+                <a href="https://linkedin.com" target="_blank">
+                    <img src="icons/linkedin.svg" alt="LinkedIn">
+                </a>
+                <a href="https://twitter.com" target="_blank">
+                    <img src="icons/twitter.svg" alt="Twitter">
+                </a>
+            </div>
+        </div>
+    
+        <!-- Копірайт -->
+        <div class="footer-bottom">
+            <p>&copy; <span id="currentYear"></span> Інформаційна система обліку техніки. Всі права захищено.</p>
+        </div>
+    </footer>
+    
+    <script>
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
